@@ -1,0 +1,242 @@
+
+
+.abcd{
+    background-color: aqua;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   width: 100vw;
+     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(231deg,rgba(22,6,40,1),rgba(52,28,79,1) 50%,rgba(88,7,125,1) 100%);
+
+
+}
+
+h1{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.display-container{
+   
+    position: relative;
+    background: linear-gradient(231deg,rgba(22,6,40,1),rgba(52,28,79,1) 50%,rgba(88,7,125,1) 100%);
+
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid greenyellow;
+    
+    padding: 0.35rem ;
+    margin: 1rem 0;
+}
+
+.container{
+    width: 90%;
+    max-width: 450px;
+
+}
+
+.display{
+    background: transparent;
+    border: none;
+   
+    width: 100%;
+    color: rgb(184, 231, 82);
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding-right: 3.5rem ;
+    
+}
+
+
+.display::placeholder{
+    position: absolute;
+   
+    left: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 30px;
+    color:rgb(184, 231, 82); 
+    
+}
+
+.display-container button{
+    background: linear-gradient(231deg,rgba(22,6,40,1),rgba(52,28,79,1) 50%,rgba(88,7,125,1) 100%);
+
+    border: none;
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+}
+
+.input-container{
+    width: 100%;
+    background-color: rgb(17, 4, 53);
+    border-radius: 1rem;
+    padding: 2rem;
+    border-bottom: 0.35rem solid greenyellow;
+     
+
+
+}
+
+.length-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.length-container P:nth-child(1){
+    color: white;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+
+.length-container P:nth-child(2){
+    color: yellow;
+    font-size: 1.5rem;
+}
+
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.strength-container p{
+    color: white;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+
+}
+
+ .ab{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+   
+ }
+
+ .generatebutton{
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    border-radius: 0.75rem;
+    border-bottom: 0.35rem solid yellow;
+    background-color: rgb(121, 11, 88);
+    text-transform: uppercase;
+    font-weight: 600;
+    color: azure;
+    cursor: pointer;
+ }
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+    color: beige;
+}
+
+
+.check input{
+  appearance: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 1px solid cyan;
+  cursor: pointer;
+  border-radius: 0.35rem;
+}
+
+
+.check input:checked{
+    background-color: aqua;
+     
+}
+
+.check input:checked::before{
+    content: '✔';
+    position: absolute;
+    font-size: 1.05rem;
+    font-weight: 600;
+ 
+    
+
+}
+
+.check label{
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+
+.slider{
+    appearance: none;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    background-color:  rgb(212, 147, 193);
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+}
+
+.slider::-webkit-slider-thumb{
+   appearance: none;
+   height: 1.5rem;
+   width: 1.5rem;
+   border-radius: 50%;
+   background-color: yellow;
+   cursor: pointer;
+   margin-top: -3px;
+}
+.slider:focus{
+    outline: 3px solid rgb(221, 229, 74);
+}
+
+.slider::-webkit-slider-thumb:hover{
+    outline: 10px solid yellowgreen;
+
+}
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid  yellow;
+    background-color:  yellow;
+    box-shadow: 0px 0px 25px 5px rgba(255, 229, 61, 0.80);
+}
+
+
+ 
+.tooltip {
+    position: absolute;
+    background-color: violet;
+    color: white;
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    /* opacity: 0; */ 
+    transform: scale(0);
+   
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+  }
+  
+  .tooltip.active {
+    opacity: 1;
+    transform: scale(1);
+  }  
